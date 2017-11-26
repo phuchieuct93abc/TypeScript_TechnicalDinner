@@ -1,0 +1,9 @@
+{
+    "files": [
+        "webContent/resources/ts/web.ts"
+    ],
+    "compilerOptions": {
+        "noImplicitAny": true,
+        "target": "es5"
+    }
+}

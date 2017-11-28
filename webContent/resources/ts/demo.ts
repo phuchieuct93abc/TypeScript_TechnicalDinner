@@ -14,44 +14,46 @@ function showErrorDialog(errorCode:number){
 }
 showDialog("Hello"); 
 //showDialog(true);//Compile error   
-//showDialog(123);//Compile error      
+//showDialog(123);//Compile error       
  
-
 //Interface
 interface Message{
-   errorCode:string;    
+   errorCode:string;  
 }
 function showMessageDialog(message:Message){
-    alert("Error code:"+message.errorCode);   
+    alert("Error code:"+message.errorCode);     
 }
 showMessageDialog({errorCode:"400"});//Pass
 //showMessageDialog(true);//Fail
 //showMessageDialog("Text");//Fail
-//showMessageDialog(123);//Fail
+//showMessageDialog(123);//Fail 
 
 
 //Class
-//TypeScript
 interface Msg{
     display():void;
  }
 
 class ErrorMsg implements Msg{
+    
+    
      display(): void {
-        alert("This is an error")
+        alert("This is an error");
      }
      
- }
+}
  class WarnMsg implements Msg{ 
+
     display(): void {
        alert("This is a warning")
-    }
-    
+    }     
 }
+
 function showMsg(message:Msg){
     message.display(); 
 }
 showMsg(new ErrorMsg());
 showMsg(new WarnMsg());
+
 
 

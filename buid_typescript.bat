@@ -1,1 +1,1 @@
-call gulp
+gulp
